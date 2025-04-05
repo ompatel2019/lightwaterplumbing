@@ -21,6 +21,9 @@ import {
 import placeholderImg from './assets/images/placeholder.png'
 import ServicePage from './pages/ServicePage';
 
+// images 
+import hero from './assets/images/hero.png'
+
 // lazy-loaded pages
 const HomePage = lazy(() => import('./pages/HomePage'));
 const ServicesPage = lazy(() => import('./pages/ServicesPage'));
@@ -244,7 +247,7 @@ const router = createBrowserRouter(
         index
         element={
           <Suspense fallback={<Fallback />}>
-            <HomePage placeholderImg={placeholderImg} projectsData={projectsData} services={services.slice(0,6)}/>
+            <HomePage hero={hero} projectsData={projectsData} services={services.slice(0,6)}/>
           </Suspense>
         }
       />

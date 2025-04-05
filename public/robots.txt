@@ -1,6 +1,13 @@
+# Allow all web crawlers full access except sensitive folders
 User-agent: *
 Allow: /
+
+# Disallowed directories
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /private/
 Disallow: /assets/
 Disallow: /static/
 
+# Sitemap location
 Sitemap: https://lightwatergroup.com.au/sitemap.xml

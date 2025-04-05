@@ -2,24 +2,28 @@
   from = "/sitemap.xml"
   to = "/sitemap.xml"
   status = 200
-  force = true
+
+[[redirects]]
+  from = "/robots.txt"
+  to = "/robots.txt"
+  status = 200
 
 # Enforce HTTPS and non-www (for canonicalization and SEO)
 [[redirects]]
-  from = "http://domain-url-goes-here.com.au/*"
-  to = "https://domain-url-goes-here.com.au/:splat"
+  from = "http://lightwatergroup.com.au/*"
+  to = "https://lightwatergroup.com.au/:splat"
   status = 301
   force = true
 
 [[redirects]]
-  from = "http://www.domain-url-goes-here.com.au/*"
-  to = "https://domain-url-goes-here.com.au/:splat"
+  from = "http://www.lightwatergroup.com.au/*"
+  to = "https://lightwatergroup.com.au/:splat"
   status = 301
   force = true
 
 [[redirects]]
-  from = "https://www.domain-url-goes-here.com.au/*"
-  to = "https://domain-url-goes-here.com.au/:splat"
+  from = "https://www.lightwatergroup.com.au/*"
+  to = "https://lightwatergroup.com.au/:splat"
   status = 301
   force = true
 
@@ -28,3 +32,23 @@
   from = "/*"
   to = "/index.html"
   status = 200
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Caching headers for assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://maps.googleapis.com https://cdn.gpteng.co; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.unsplash.com https://cdn.builder.io https://maps.gstatic.com https://maps.googleapis.com; connect-src 'self' https://www.google-analytics.com https://stats.g.doubleclick.net; frame-ancestors 'none';"

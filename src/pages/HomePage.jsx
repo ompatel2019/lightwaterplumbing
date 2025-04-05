@@ -13,7 +13,7 @@ import Testimonials from '../components/Testimonials';
 import Faqs from '../components/Faqs';
 import { BlurFade } from "@/components/magicui/blur-fade";
 
-const HomePage = ({ placeholderImg, services, projectsData }) => {
+const HomePage = ({ hero, services, projectsData }) => {
   const jsonLdHomePage = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -38,14 +38,14 @@ return (
       />
 
       <BlurFade delay={0.15} inView>
-        <Hero placeholderImg={placeholderImg}/>
+        <Hero hero={hero}/>
       </BlurFade>
 
       <Services bg="bg-secondary" text="text-textBlack" services={services} isHome={true}/>
       <CTAMini text="Schedule Your Free Consultation Today"/>
-      <WhyChooseUs bg="bg-white" text="text-textBlack" placeholderImg={placeholderImg}/>
+      <WhyChooseUs bg="bg-white" text="text-textBlack" hero={hero}/>
       <Stats stats={stats} bg="bg-primary" text="text-textWhite" isHome={true}/>
-      <Projects bg="bg-white" text="text-textBlack" isHome={true} placeholderImg={placeholderImg} projectsData={projectsData}/>
+      <Projects bg="bg-white" text="text-textBlack" isHome={true} hero={hero} projectsData={projectsData}/>
       <CTAMini text="Schedule Your Free Consultation Today!"/>
       <Testimonials bg="bg-white" text="text-textBlack"/>
       <Faqs bg="bg-white" text="text-textBlack"/>

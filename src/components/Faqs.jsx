@@ -5,39 +5,35 @@ import SectionHeader from './SectionHeader';
 const Faqs = () => {
   const faqs = [
     {
-      question: "Lorem ipsum dolor sit amet consectetur adipisicing?",
+      question: "Do you provide plumbing quotations?",
       answer:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic veritatis molestias culpa in, recusandae laboriosam neque aliquid libero nesciunt voluptate dicta quo officiis explicabo consequuntur distinctio corporis earum similique!",
+        "Yes, we offer free, no-obligation quotations for all plumbing, drainage, and gas work. Our licensed plumbers will visit your property, assess the scope of work, and provide a clear quote with no hidden fees.",
     },
     {
-      question: "Another important question about our services?",
+      question: "Is LightWater Plumbing a fully licensed plumbing company?",
       answer:
-        "Consequuntur harum ratione eveniet ab corrupti atque repellat, excepturi dolor commodi! Inventore consequuntur accusamus, quos illo aliquam quisquam tempora nulla!",
+        "Absolutely. We are a fully licensed and insured plumbing, drainage, and gas company. You can trust that our team meets all Australian standards and regulatory requirements.",
     },
     {
-      question: "What if I have additional inquiries?",
+      question: "Which areas do you cover?",
       answer:
-        "Feel free to contact our support team at any time. We aim to respond to all queries promptly and help you find the solution that's right for you!",
+        "We service a wide area from Katoomba to Sydney. For larger-scale jobs, we’re also available to travel statewide across New South Wales. If you're unsure, feel free to reach out and ask.",
     },
     {
-      question: "What if I have additional inquiries?",
+      question: "Why is my water suddenly brown?",
       answer:
-        "Feel free to contact our support team at any time. We aim to respond to all queries promptly and help you find the solution that's right for you!",
+        "Discoloured or brown water could indicate a burst pipe or corrosion inside your hot water system. It's best to shut off the hot water and contact us for a quick inspection and solution.",
     },
     {
-      question: "What if I have additional inquiries?",
+      question: "Why is my outdoor drain is overflowing when it hasn’t rained?",
       answer:
-        "Feel free to contact our support team at any time. We aim to respond to all queries promptly and help you find the solution that's right for you!",
-    },
-    {
-      question: "What if I have additional inquiries?",
-      answer:
-        "Feel free to contact our support team at any time. We aim to respond to all queries promptly and help you find the solution that's right for you!",
+        "This is typically caused by a blockage in your main sewer line. The overflow is a safety feature that helps prevent wastewater from backing up into your home. Call us immediately for an urgent clean-out.",
     },
   ];
+  
 
   return (
-    <Section bg="bg-black" text="text-white">
+    <Section bg="bg-primary" text="text-textWhite">
       <SectionHeader 
         sectionName="FAQs" 
         sectionHeader="Frequently Asked Questions"

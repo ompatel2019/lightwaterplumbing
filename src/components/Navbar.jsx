@@ -11,6 +11,8 @@ import {
 import { Button } from "@heroui/button";
 import { NavLink } from 'react-router-dom'
 import { Link } from "react-router-dom";
+import logo from "../assets/images/logo.svg"
+import ImageComponent from "./ImageComponent";
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -24,7 +26,7 @@ export default function App() {
     { linkName: "Get a Quote", linkTo: "/contact-us" },
   ];
 
-  const linkClass = ({isActive}) => isActive ? 'text-primary rounded-sm p' : 'p text-white hover:text-primary transition'
+  const linkClass = ({isActive}) => isActive ? 'text-primary-400 rounded-sm p' : 'p text-textDark hover:text-primary-400 transition'
 
   // For fully controlled, pass BOTH isMenuOpen and onMenuOpenChange
   return (
@@ -32,7 +34,7 @@ export default function App() {
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       maxWidth="full"
-      className="bg-black text-white font-supreme-medium xl:py-3 py-2 2xl:px-[64px] xl:px-[48px] lg:px-[40px] md:px-[16px] sm:px-[8px]"
+      className="bg-white text-textDark font-supreme-medium xl:py-3 py-2 2xl:px-[64px] xl:px-[48px] lg:px-[40px] md:px-[16px] sm:px-[8px]"
     >
       {/* Left side: brand + menu toggle (mobile) */}
       <NavbarContent>
@@ -42,7 +44,13 @@ export default function App() {
         />
         <NavbarBrand>
           <Link to='/'>
-            <p className="font-bold text-inherit p">Lightwater Plumbing</p>
+          <ImageComponent 
+              src={logo} 
+              alt="Lightwater Plumbing logo" 
+              width={48} 
+              height={48} 
+              loading="eager" 
+            />
           </Link>
         </NavbarBrand>
       </NavbarContent>
@@ -63,7 +71,7 @@ export default function App() {
           <Button
             as={Link}
             to="/contact-us"
-            className="bg-primary text-black px-6 rounded-sm p"
+            className="bg-primary text-textWhite px-6 rounded-sm p"
             >
             {item.linkName}
           </Button>
@@ -71,7 +79,7 @@ export default function App() {
         </NavbarContent>
 
       {/* Mobile Menu */}
-      <NavbarMenu className="bg-black text-white mt-12 md:px-10 sm:px-8 px-6 font-supreme">
+      <NavbarMenu className="bg-white text-textDark mt-12 md:px-10 sm:px-8 px-6 font-supreme-medium">
         {menuItems.map((item) => (
           <NavbarMenuItem
             key={item.linkName}
@@ -80,7 +88,7 @@ export default function App() {
             <NavLink
               to={item.linkTo}
               onClick={() => setIsMenuOpen(false)}
-              className="hover:text-primary transition p"
+              className="hover:underline transition p"
             >
               {item.linkName}
             </NavLink>

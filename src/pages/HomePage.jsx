@@ -23,12 +23,12 @@ const HomePage = ({ placeholderImg, services, projectsData }) => {
   };
 
   const stats = [ 
-    { stat: "10", statType: "+", statDesc: "Years Experience" },
-    { stat: "550", statType: "+", statDesc: "Clients Served" },
-    { stat: "1100", statType: "+", statDesc: "Projects Completed" }
+    { stat: "15", statType: "+", statDesc: "Years Experience" },
+    { stat: "800", statType: "+", statDesc: "Clients Served" },
+    { stat: "2500", statType: "+", statDesc: "Projects Completed" }
   ];
 
-  return (
+return (
     <>
       <SeoHelmet
         title="Lightwater Plumbing | Penrith Plumbing & Services"
@@ -38,19 +38,17 @@ const HomePage = ({ placeholderImg, services, projectsData }) => {
       />
 
       <BlurFade delay={0.15} inView>
-        <CTAMini text="Book online and receive $50 off your first service"/>
         <Hero placeholderImg={placeholderImg}/>
       </BlurFade>
 
-      <Stats stats={stats} bg="bg-primary" text="text-black" isHome={true}/>
-      <Services bg="bg-black" text="text-white" services={services} isHome={true}/>
+      <Services bg="bg-secondary" text="text-textBlack" services={services} isHome={true}/>
       <CTAMini text="Schedule Your Free Consultation Today"/>
-      <WhyChooseUs bg="bg-black" text="text-white" placeholderImg={placeholderImg}/>
-      <CTAMini text="Book a No-Commitment call today!"/>
-      <Projects bg="bg-black" text="text-white" isHome={true} placeholderImg={placeholderImg} projectsData={projectsData}/>
+      <WhyChooseUs bg="bg-white" text="text-textBlack" placeholderImg={placeholderImg}/>
+      <Stats stats={stats} bg="bg-primary" text="text-textWhite" isHome={true}/>
+      <Projects bg="bg-white" text="text-textBlack" isHome={true} placeholderImg={placeholderImg} projectsData={projectsData}/>
       <CTAMini text="Schedule Your Free Consultation Today!"/>
-      <Testimonials bg="bg-black" text="text-white"/>
-      <Faqs />
+      <Testimonials bg="bg-white" text="text-textBlack"/>
+      <Faqs bg="bg-white" text="text-textBlack"/>
     </>
   );
 };

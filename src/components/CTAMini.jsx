@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 const CTAMini = ({text}) => {
   return (
   <div className="">
-    <div className="bg-primary px-4 py-3 text-black shadow-lg font-supreme-medium flex justify-center items-center">
-      <Link to="/contact-us" className='flex hover:invert w-fit'>
+    <div className="bg-primary p-4 text-textWhite shadow-lg font-supreme-medium flex justify-center items-center">
+      <Link to="/contact-us" className='flex w-fit gap-2 hover:gap-0 transition-all'>
         <p className="text-center max-md:text-sm p">
         {text}
         </p>

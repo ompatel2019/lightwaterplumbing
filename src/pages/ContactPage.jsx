@@ -37,8 +37,7 @@ const ContactPage = ({ placeholderImg }) => {
         heading="Contact Us"
         subheading="Get in touch for fast, friendly support—our dedicated team is available 24/7 for all your plumbing needs."
       />
-      <Stats stats={stats} bg="bg-black" text="text-white"/>
-      <CTAMini text="Get Your No-Obligation Quote Now"/>
+      <Stats stats={stats} bg="bg-primary" text="text-textWhite"/>
       <ContactForm />
       <Faqs />
     </>

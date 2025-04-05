@@ -3,17 +3,14 @@ import { Link } from 'react-router-dom';
 import Section from './Section';
 // Make sure you've installed "bootstrap-icons" and imported the CSS in your app
 // import 'bootstrap-icons/font/bootstrap-icons.css';
+import logo from "../assets/images/logo.svg"
+import ImageComponent from "./ImageComponent";
 
 const Footer = ({ bg, text }) => {
   const py = '2xl:pt-32 xl:pt-24 md:pt-16 sm:pt-12 pt-8';
 
   // Feel free to move this data outside the component or make it dynamic
   const data = {
-    logo: {
-      url: '#',
-      src: 'https://d22po4pjz3o32e.cloudfront.net/logo-image.svg',
-      alt: 'Logo image',
-    },
     address: {
       label: 'Address:',
       value: 'Orchard Hills, New South Wales',
@@ -36,7 +33,7 @@ const Footer = ({ bg, text }) => {
         links: [
           { title: 'About Us', url: '/about-us' },
           { title: 'Contact Us', url: '/contact-us' },
-          { title: 'Leave Us A Review', url: '#' },
+          { title: 'Leave Us A Review', url: 'https://g.page/r/CZQxhjmvUeTaEAI/review' },
         ],
       },
     ],
@@ -55,7 +52,7 @@ const Footer = ({ bg, text }) => {
     ],
   };
 
-  const { logo, address, contact, columnLinks, socialMediaLinks, footerText, footerLinks } = data;
+  const { address, contact, columnLinks, socialMediaLinks, footerText, footerLinks } = data;
 
   return (
     <Section bg={bg} text={text} py={py}>
@@ -67,9 +64,13 @@ const Footer = ({ bg, text }) => {
             <div>
               {/* Logo */}
               <div className="rb-6 mb-6 md:mb-8">
-                <a href={logo.url}>
-                  <img src={logo.src} alt={logo.alt} className="inline-block" />
-                </a>
+              <ImageComponent 
+                src={logo} 
+                alt="Lightwater Plumbing logo" 
+                width={48} 
+                height={48} 
+                loading="lazy" 
+                />
               </div>
 
               {/* Address & Contact */}
@@ -103,7 +104,7 @@ const Footer = ({ bg, text }) => {
                 <ul key={i}>
                   {col.links.map((link, j) => (
                     <li key={j} className="py-2 text-sm font-semibold">
-                      <a href={link.url}>{link.title}</a>
+                      <a target='_blank' href={link.url}>{link.title}</a>
                     </li>
                   ))}
                 </ul>

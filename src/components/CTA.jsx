@@ -23,7 +23,7 @@ const CTA = ({ bg, text }) => {
   ];
 
   return (
-    <Section bg={'bg-black'} text={'text-white'}>
+    <Section bg={bg} text={text}>
       <div className="container mx-auto px-4 py-10 flex flex-col items-center space-y-8 text-center font-supreme">
         
         {/* Bold Headline */}
@@ -42,7 +42,7 @@ const CTA = ({ bg, text }) => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="rounded-lg p-6 py-10 flex flex-col items-center space-y-3 bg-[#3f3f3f] text-white"
+              className="rounded-lg p-6 py-10 flex flex-col items-center space-y-3 bg-primary-100"
             >
               {/* Icon (using Bootstrap Icons classes) */}
               <i className={`${feature.icon} text-5xl text-blue-600`} />

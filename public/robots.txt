@@ -3,4 +3,4 @@ Allow: /
 Disallow: /assets/
 Disallow: /static/
 
-Sitemap: https://domain-url-goes-here.com.au/sitemap.xml
+Sitemap: https://lightwatergroup.com.au/sitemap.xml

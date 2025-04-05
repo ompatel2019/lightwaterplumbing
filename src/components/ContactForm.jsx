@@ -28,7 +28,7 @@ const ContactForm = () => {
   };
 
   return (
-    <Section bg="bg-black" text="text-white">
+    <Section bg="bg-white" text="text-textBlack">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {/* Left Side (Contact Info) */}
@@ -40,7 +40,7 @@ const ContactForm = () => {
               centre={false}
             />
 
-            <ul className="mt-4 space-y-4 text-gray-300">
+            <ul className="mt-4 space-y-4 text-black-300">
               <li className="flex items-center">
                 <i className="bi bi-envelope-fill mr-3 text-xl"></i>
                 plumbing@lightwatergroup.com.au
@@ -57,7 +57,7 @@ const ContactForm = () => {
           </div>
 
           {/* Right Side (Form) */}
-          <div className="bg-[#3f3f3f] rounded-xl text-white shadow-xl 2xl:p-12 lg:p-10 md:p-8 p-6 font-supreme">
+          <div className="bg-primary-100 rounded-xl text-textBlack shadow-xl 2xl:p-12 lg:p-10 md:p-8 p-6 font-supreme">
             <h2 className="text-3xl font-bold font-supreme-bold mb-4">
               Claim $50 Off Your First Service
             </h2>
@@ -80,14 +80,14 @@ const ContactForm = () => {
                 name="name"
                 placeholder="Name*"
                 required
-                className="w-full py-4 px-2 placeholder-white bg-transparent border-b-2 border-white outline-none"
+                className="w-full py-4 px-2 placeholder-dark bg-transparent border-b-2 border-dark outline-none"
               />
 
               <input
                 type="email"
                 name="email"
                 placeholder="Email (optional)"
-                className="w-full py-4 px-2 placeholder-white bg-transparent border-b-2 border-white outline-none"
+                className="w-full py-4 px-2 placeholder-dark bg-transparent border-b-2 border-dark outline-none"
               />
 
               <input
@@ -95,14 +95,14 @@ const ContactForm = () => {
                 name="phone"
                 placeholder="Phone*"
                 required
-                className="w-full py-4 px-2 placeholder-white bg-transparent border-b-2 border-white outline-none"
+                className="w-full py-4 px-2 placeholder-dark bg-transparent border-b-2 border-dark outline-none"
               />
 
               <textarea
                 name="message"
                 placeholder="Inquiry*"
                 required
-                className="w-full py-4 px-2 placeholder-white bg-transparent border-b-2 border-white outline-none h-32 resize-none"
+                className="w-full py-4 px-2 placeholder-dark bg-transparent border-b-2 border-dark outline-none h-32 resize-none"
               />
 
               <div data-netlify-recaptcha="true"></div>

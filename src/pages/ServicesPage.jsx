@@ -37,10 +37,10 @@ const ServicesPage = ({ services, placeholderImg }) => {
         heading="Services"
         subheading="Our expert team delivers reliable plumbing and electrical services—from emergency repairs to new installations."
       />
-      <Stats stats={stats} bg="bg-black" text="text-white"/>
+      <Stats stats={stats} bg="bg-primary" text="text-white"/>
+      <Services bg="bg-white" text="text-textBlack" services={services} isHome={false}/>
       <CTAMini text="Get Your No-Obligation Quote Now"/>
-      <Services bg="bg-black" text="text-white" services={services} isHome={false}/>
-      <CTA bg="bg-primary" text="text-black"/>
+      <CTA bg="bg-white" text="text-textBlack"/>
     </>
   );
 };

@@ -9,12 +9,12 @@ const Stat = ({stat, statDesc, statType, textColour}) => {
                 value={stat}
                 className={textColour}
             />
-            <p>
+            <p className='text-textWhite'>
                 {statType}
             </p>
         </p>
 
-        <h5 className='text-center font-supreme-medium h5'>
+        <h5 className='text-center font-supreme-medium h5 text-textWhite'>
             {statDesc}
         </h5>
     </div>

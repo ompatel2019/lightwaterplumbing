@@ -23,7 +23,7 @@ const Stats = ({ stats, bg, text, isHome }) => {
   const displayedStats = width < 480 ? stats.slice(0, 2) : stats
 
   let textColour = ''
-  isHome ? textColour = 'text-black' : textColour = 'text-white'
+  isHome ? textColour = 'text-textWhite' : textColour = 'text-textWhite'
 
   return (
     <Section bg={bg} text={text} py={py}>

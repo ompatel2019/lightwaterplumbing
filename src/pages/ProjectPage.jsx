@@ -48,7 +48,7 @@ const ProjectPage = ({ projectsData }) => {
 
       <CTAMini text="Book online and receive $50 off your first service" />
 
-      <Section bg="bg-black" text="text-white">
+      <Section bg="bg-white" text="text-white">
         <PageHeadingHeader
           route={`Home / Projects / ${project.title}`}
           heading={project.title}

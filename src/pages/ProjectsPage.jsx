@@ -18,8 +18,8 @@ const ProjectsPage = ({ placeholderImg, projectsData }) => {
 
   const stats = [
     { stat: "120", statType: "+", statDesc: "Residential Installations" },
-    { stat: "550", statType: "+", statDesc: "Clients Served" },
-    { stat: "1100", statType: "+", statDesc: "Projects Completed" }
+    { stat: "800", statType: "+", statDesc: "Clients Served" },
+    { stat: "2500", statType: "+", statDesc: "Projects Completed" }
   ];
 
   return (
@@ -37,16 +37,16 @@ const ProjectsPage = ({ placeholderImg, projectsData }) => {
         heading="Projects"
         subheading="Explore our portfolio of completed projects, demonstrating quality workmanship and innovative solutions."
       />
-      <Stats stats={stats} bg="bg-black" text="text-white"/>
-      <CTAMini text="Claim Your Exclusive Discount Now"/>
+      <Stats stats={stats} bg="bg-primary" text="text-textWhite"/>
       <Projects
-        bg="bg-black"
-        text="text-white"
+        bg="bg-white"
+        text="text-textBlack"
         isHome={false}
         placeholderImg={placeholderImg}
         projectsData={projectsData}
       />
-      <CTA bg="bg-primary" text="text-black"/>
+      <CTAMini text="Claim Your Exclusive Discount Now"/>
+      <CTA bg="bg-white" text="text-textBlack"/>
     </>
   );
 };

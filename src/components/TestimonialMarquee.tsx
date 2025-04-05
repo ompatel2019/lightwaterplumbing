@@ -155,8 +155,8 @@ const ReviewCard = ({
   return (
     <figure
       className={cn(
-        "relative h-full 2xl:w-[412px] lg:w-96 md:w-80 w-72 cursor-pointer overflow-hidden rounded-lg border p-6 py-8 text-left font-generalSans-medium text-black",
-        "border-gray-950/[.1] bg-white",
+        "relative h-full 2xl:w-[412px] lg:w-96 md:w-80 w-72 cursor-pointer overflow-hidden rounded-lg border p-6 py-8 text-left font-generalSans-medium text-textblack",
+        "border-gray-950/[.1] bg-primary text-textWhite",
       )}
     >
       <div className="flex flex-row items-center gap-2">

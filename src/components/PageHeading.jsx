@@ -1,26 +1,24 @@
 import React from 'react'
-import { ImagesMarqueeVert } from './ImagesMarqueeVert'
-import { ImagesMarqueeHor } from './ImagesMarqueeHor'
 import PageHeadingHeader from './PageHeadingHeader'
 
-const PageHeading = ({placeholderImg, route, heading, subheading}) => {
+const PageHeading = ({ placeholderImg, route, heading, subheading }) => {
   return (
-    <section className='grid grid-cols-2 bg-primary max-md:grid-cols-1 font-supreme text-black max-lg:text-center'>
-        <div className="cols-span-1 2xl:py-16 xl:py-12 pt-12 pb-8 flex flex-col justify-center max-md:items-center 2xl:pl-[80px] xl:pl-[64px] xl:pr-0 lg:px-[48px] md:px-[24px] sm:px-[16px] px-[8px] max-lg:space-y-4">
-          <PageHeadingHeader
+    <section
+      className="relative w-full h-[60vh] flex items-center justify-start text-white font-supreme text-left"
+      style={{
+        backgroundImage: `url(${placeholderImg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
+      <div className="absolute inset-0 bg-black opacity-60 z-0"></div>
+
+      <div className="relative z-10 responsivePad">
+        <PageHeadingHeader
           route={route}
           heading={heading}
           subheading={subheading}
         />
-        </div>
-
-      <div>
-        <div className="hidden md:block">
-          <ImagesMarqueeVert placeholderImg={placeholderImg} height={"500px"}/>
-        </div>
-        <div className="md:hidden block pb-8">
-          <ImagesMarqueeHor placeholderImg={placeholderImg} />  
-        </div>
       </div>
     </section>
   )

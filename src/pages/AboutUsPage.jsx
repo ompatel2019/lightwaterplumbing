@@ -20,8 +20,8 @@ const AboutUsPage = ({ placeholderImg }) => {
 
   const stats = [
     { stat: "30", statType: "+", statDesc: "Services Offered" },
-    { stat: "550", statType: "+", statDesc: "Satisfied Customers" },
-    { stat: "1100", statType: "+", statDesc: "Projects Completed" }
+    { stat: "800", statType: "+", statDesc: "Satisfied Customers" },
+    { stat: "2500", statType: "+", statDesc: "Projects Completed" }
   ];
 
   return (
@@ -39,10 +39,10 @@ const AboutUsPage = ({ placeholderImg }) => {
         heading="About Us"
         subheading="Learn about our history, mission, and how we serve with top-notch plumbing solutions."
       />
-      <Stats stats={stats} bg="bg-black" text="text-white"/>
+      <Stats stats={stats} bg="bg-primary" text="text-textWhite"/>
+      <AboutUs bg="bg-white" text="text-textBlack"/>
       <CTAMini text="Get Your No-Obligation Quote Now"/>
-      <AboutUs />
-      <Testimonials bg="bg-black" text="text-white"/>
+      <Testimonials bg="bg-white" text="text-textBlack"/>
       <Faqs />
       <CTA />
     </>

@@ -48,7 +48,7 @@ const ServicePage = ({ services }) => {
 
       <CTAMini text="Book online and receive $50 off your first service" />
 
-      <Section bg="bg-black" text="text-white">
+      <Section bg="bg-white" text="text-textBlack">
         <PageHeadingHeader
           route={`Home / Services / ${service.serviceName}`}
           heading={service.serviceName}

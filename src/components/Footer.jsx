@@ -17,7 +17,7 @@ const Footer = ({ bg, text }) => {
     },
     contact: {
       label: 'Contact:',
-      phone: '0412 569 739',
+      phone: '0432 147 251',
       email: 'plumbing@lightwatergroup.com.au',
     },
     columnLinks: [

@@ -1,23 +1,23 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Hero = ({ hero }) => {
+const Hero = ({ heroImg }) => {
   const h1 = "Lightwater Plumbing - Trusted Penrith Plumbers"
   const p = "We fix plumbing issues fast and reliably. Count on our skilled team for expert repairs and installations that keep your water systems running smoothly, day and night."
   const buttonClass = 'border-2 border-transparent w-full max-w-[200px] text-textblack bg-primary 2xl:p-4 p-2 hover:bg-white text-center rounded-md p hover:text-textDark hover:border-white transition-all'
 
   return (
     <section
-      className="relative w-full h-[75vh] flex items-center justify-center text-white font-supreme"
+      className="relative w-full lg:h-[90vh] md:h-[75vh] sm:h-[60vh] h-[50vh] flex items-center justify-center text-white font-supreme"
       style={{
-        backgroundImage: `url(${hero})`,
+        backgroundImage: `url(${heroImg})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
     >
       <div className="absolute inset-0 bg-dark opacity-60 z-0"></div>
 
-      <div className="relative z-10 flex flex-col items-center text-center responsivePad space-y-6">
+      <div className="relative z-10 flex flex-col items-center text-center responsivePad space-y-6 pt-24">
         {/* <p className='p-4 rounded-md bg-dark p text-textblack'>
           Lightwater Plumbing
         </p> */}

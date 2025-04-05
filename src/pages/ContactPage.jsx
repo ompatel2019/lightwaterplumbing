@@ -7,15 +7,8 @@ import Stats from '../components/Stats';
 import CTAMini from '../components/CTAMini';
 import PageHeading from '../components/PageHeading';
 
-const ContactPage = ({ placeholderImg }) => {
-  const jsonLdContactPage = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Contact Us | Lightwater Plumbing",
-    "description": "Reach out to Lightwater Plumbing for reliable plumbing solutions. We're here to help 24/7.",
-    "url": "https://example.com/contact"
-  };
-
+const ContactPage = ({ contactImg }) => {
+  
   const stats = [
     { stat: "30", statType: "+", statDesc: "Services Offered" },
     { stat: "100", statType: "%", statDesc: "Customer Satisfaction" },
@@ -27,12 +20,18 @@ const ContactPage = ({ placeholderImg }) => {
       <SeoHelmet
         title="Contact Us | Lightwater Plumbing"
         description="Reach out to Lightwater Plumbing for reliable plumbing solutions. We're here to help 24/7."
-        canonicalUrl="https://example.com/contact"
-        jsonSchema={jsonLdContactPage}
+        canonicalUrl="https://lightwatergroup.com.au/contact-us"
+        jsonSchema={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Contact Us | Lightwater Plumbing",
+          "description": "Reach out to Lightwater Plumbing for reliable plumbing solutions. We're here to help 24/7.",
+          "url": "https://lightwatergroup.com.au/contact-us"
+        }}
       />
 
       <PageHeading
-        placeholderImg={placeholderImg}
+        img={contactImg}
         route="Home / Contact Us"
         heading="Contact Us"
         subheading="Get in touch for fast, friendly support—our dedicated team is available 24/7 for all your plumbing needs."

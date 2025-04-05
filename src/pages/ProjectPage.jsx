@@ -20,30 +20,26 @@ const ProjectPage = ({ projectsData }) => {
     return <NotFoundPage />;
   }
 
-  // Construct a canonical URL for SEO
-  const canonicalUrl = `https://example.com/projects/${slug}`;
-
-  // Basic JSON-LD for a “Project,” referencing Penrith and Lightwater Plumbing
-  const jsonLdProjectPage = {
-    "@context": "https://schema.org",
-    "@type": "Project",
-    "name": project.title,
-    "description": project.description,
-    "creator": {
-      "@type": "Organization",
-      "name": "Lightwater Plumbing",
-      "location": "Penrith, Australia"
-    },
-    "url": canonicalUrl
-  };
+  const canonicalUrl = `https://lightwatergroup.com.au/projects/${slug}`;
 
   return (
     <>
       <SeoHelmet
         title={`${project.title} | Lightwater Plumbing`}
-        description={`${project.description}`}
+        description={project.description}
         canonicalUrl={canonicalUrl}
-        jsonSchema={jsonLdProjectPage}
+        jsonSchema={{
+          "@context": "https://schema.org",
+          "@type": "Project",
+          "name": project.title,
+          "description": project.description,
+          "creator": {
+            "@type": "Organization",
+            "name": "Lightwater Plumbing",
+            "location": "Penrith, Australia"
+          },
+          "url": canonicalUrl
+        }}
       />
 
       <CTAMini text="Book online and receive $50 off your first service" />

@@ -7,7 +7,7 @@ const PageHeadingHeader = ({route, heading, subheading}) => {
             {route}
         </p>
 
-        <h1 className='h1 font-supreme-extrabold'>
+        <h1 className='h2 font-supreme-extrabold'>
             {heading}
         </h1>
 

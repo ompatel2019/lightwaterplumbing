@@ -43,7 +43,7 @@ const ContactForm = () => {
             <ul className="mt-4 space-y-4 text-black-300">
               <li className="flex items-center">
                 <i className="bi bi-envelope-fill mr-3 text-xl"></i>
-                plumbing@lightwatergroup.com.au
+                <a href="mailto:plumbing@lightwatergroup.com.au">plumbing@lightwatergroup.com.au</a>
               </li>
               <li className="flex items-center">
                 <i className="bi bi-geo-alt-fill mr-3 text-xl"></i>
@@ -51,13 +51,13 @@ const ContactForm = () => {
               </li>
               <li className="flex items-center">
                 <i className="bi bi-telephone-fill mr-3 text-xl"></i>
-                0432 147 251
+                <a href="tel:#0432 147 251">0432 147 251</a>
               </li>
             </ul>
           </div>
 
           {/* Right Side (Form) */}
-          <div className="bg-primary-100 rounded-xl text-textBlack shadow-xl 2xl:p-12 lg:p-10 md:p-8 p-6 font-supreme">
+          <div className="bg-primary rounded-xl text-textWhite shadow-xl 2xl:p-12 lg:p-10 md:p-8 p-6 font-supreme">
             <h2 className="text-3xl font-bold font-supreme-bold mb-4">
               Claim $50 Off Your First Service
             </h2>
@@ -80,14 +80,14 @@ const ContactForm = () => {
                 name="name"
                 placeholder="Name*"
                 required
-                className="w-full py-4 px-2 placeholder-dark bg-transparent border-b-2 border-dark outline-none"
+                className="w-full py-4 px-2 placeholder-textWhite bg-transparent border-b-2 border-white outline-none"
               />
 
               <input
                 type="email"
                 name="email"
                 placeholder="Email (optional)"
-                className="w-full py-4 px-2 placeholder-dark bg-transparent border-b-2 border-dark outline-none"
+                className="w-full py-4 px-2 placeholder-textWhite bg-transparent border-b-2 border-white outline-none"
               />
 
               <input
@@ -95,21 +95,21 @@ const ContactForm = () => {
                 name="phone"
                 placeholder="Phone*"
                 required
-                className="w-full py-4 px-2 placeholder-dark bg-transparent border-b-2 border-dark outline-none"
+                className="w-full py-4 px-2 placeholder-textWhite bg-transparent border-b-2 border-white outline-none"
               />
 
               <textarea
                 name="message"
                 placeholder="Inquiry*"
                 required
-                className="w-full py-4 px-2 placeholder-dark bg-transparent border-b-2 border-dark outline-none h-32 resize-none"
+                className="w-full py-4 px-2 placeholder-textWhite bg-transparent border-b-2 border-white outline-none h-32 resize-none"
               />
 
               <div data-netlify-recaptcha="true"></div>
 
               <button
                 type="submit"
-                className="w-full bg-black text-white font-semibold py-4 rounded-lg hover:bg-blue-500 transition duration-200"
+                className="w-full bg-black text-white font-semibold py-4 rounded-lg hover:bg-white hover:text-black transition duration-200"
               >
                 Send Inquiry
               </button>

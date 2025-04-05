@@ -14,7 +14,7 @@ const Service = ({ serviceImg, serviceName, serviceDesc, onMouseEnter, onMouseLe
       onMouseLeave={onMouseLeave}
     >
       {/* Decorative corner accent */}
-      <div className="absolute -top-10 -right-10 w-40 h-40 bg-white opacity-0 group-hover:opacity-20 transform rotate-45 transition-all duration-300"></div>
+      <div className="absolute -top-10 -right-10 w-20 h-20 bg-white opacity-0 group-hover:opacity-20 transform rotate-45 transition-all duration-300"></div>
 
       <div className="flex flex-col space-y-4">
         <div className="p-3 rounded-lg inline-block">
@@ -25,7 +25,7 @@ const Service = ({ serviceImg, serviceName, serviceDesc, onMouseEnter, onMouseLe
           {serviceName}
         </h5>
 
-        <p className="font-supreme text-sm text-left group-hover:text-gray-300 text-textDark">
+        <p className="font-supreme text-sm text-left group-hover:text-textWhite text-textDark">
           {serviceDesc}
         </p>
       </div>

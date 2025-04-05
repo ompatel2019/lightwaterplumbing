@@ -9,7 +9,7 @@ const Topbar = () => {
   return (
     <header
       className="responsivePad bg-primary font-supreme-medium
-      flex justify-between 2xl:py-6 lg:py-4 py-2 text-textWhite"
+      flex justify-between 2xl:py-6 lg:py-4 py-2 text-textWhite z-[60] relative"
     >
       <div className='flex justify-center items-center gap-1'>
         <TbHours24 className='h7' />

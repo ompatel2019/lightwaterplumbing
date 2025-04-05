@@ -13,14 +13,7 @@ import Testimonials from '../components/Testimonials';
 import Faqs from '../components/Faqs';
 import { BlurFade } from "@/components/magicui/blur-fade";
 
-const HomePage = ({ hero, services, projectsData }) => {
-  const jsonLdHomePage = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Lightwater Plumbing | Penrith Plumbing & Services",
-    "description": "Welcome to Lightwater Plumbing, your trusted provider of plumbing services in Penrith.",
-    "url": "https://example.com/"
-  };
+const HomePage = ({ heroImg, services, projectsData }) => {
 
   const stats = [ 
     { stat: "15", statType: "+", statDesc: "Years Experience" },
@@ -33,19 +26,25 @@ return (
       <SeoHelmet
         title="Lightwater Plumbing | Penrith Plumbing & Services"
         description="Welcome to Lightwater Plumbing, your local Penrith experts for reliable plumbing and maintenance solutions."
-        canonicalUrl="https://example.com/"
-        jsonSchema={jsonLdHomePage}
+        canonicalUrl="https://lightwatergroup.com.au/"
+        jsonSchema={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Lightwater Plumbing | Penrith Plumbing & Services",
+          "description": "Welcome to Lightwater Plumbing, your trusted provider of plumbing services in Penrith.",
+          "url": "https://lightwatergroup.com.au/"
+        }}
       />
 
       <BlurFade delay={0.15} inView>
-        <Hero hero={hero}/>
+        <Hero heroImg={heroImg}/>
+        <Stats stats={stats} bg="bg-primary" text="text-textWhite" isHome={true}/>  
       </BlurFade>
 
       <Services bg="bg-secondary" text="text-textBlack" services={services} isHome={true}/>
       <CTAMini text="Schedule Your Free Consultation Today"/>
-      <WhyChooseUs bg="bg-white" text="text-textBlack" hero={hero}/>
-      <Stats stats={stats} bg="bg-primary" text="text-textWhite" isHome={true}/>
-      <Projects bg="bg-white" text="text-textBlack" isHome={true} hero={hero} projectsData={projectsData}/>
+      <WhyChooseUs bg="bg-white" text="text-textBlack" />
+      <Projects bg="bg-white" text="text-textBlack" isHome={true}  projectsData={projectsData}/>
       <CTAMini text="Schedule Your Free Consultation Today!"/>
       <Testimonials bg="bg-white" text="text-textBlack"/>
       <Faqs bg="bg-white" text="text-textBlack"/>

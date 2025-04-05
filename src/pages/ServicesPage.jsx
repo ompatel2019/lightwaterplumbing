@@ -7,15 +7,8 @@ import Stats from '../components/Stats';
 import CTAMini from '../components/CTAMini';
 import PageHeading from '../components/PageHeading';
 
-const ServicesPage = ({ services, placeholderImg }) => {
-  const jsonLdServicesPage = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Our Services",
-    "description": "Discover our range of professional plumbing and maintenance services in Penrith.",
-    "url": "https://example.com/services"
-  };
-
+const ServicesPage = ({ services, servicesImg }) => {
+  
   const stats = [
     { stat: "30", statType: "+", statDesc: "Services Offered" },
     { stat: "100", statType: "%", statDesc: "Customer Satisfaction" },
@@ -27,12 +20,18 @@ const ServicesPage = ({ services, placeholderImg }) => {
       <SeoHelmet
         title="Services | Lightwater Plumbing"
         description="Discover our range of professional plumbing services. From emergency repairs to routine maintenance."
-        canonicalUrl="https://example.com/services"
-        jsonSchema={jsonLdServicesPage}
+        canonicalUrl="https://lightwatergroup.com.au/services"
+        jsonSchema={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Our Services",
+          "description": "Discover our range of professional plumbing and maintenance services in Penrith.",
+          "url": "https://lightwatergroup.com.au/services"
+        }}
       />
 
       <PageHeading
-        placeholderImg={placeholderImg}
+        img={servicesImg}
         route="Home / Services"
         heading="Services"
         subheading="Our expert team delivers reliable plumbing and electrical services—from emergency repairs to new installations."

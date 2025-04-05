@@ -4,7 +4,7 @@ import { NumberTicker } from "@/components/magicui/number-ticker";
 const Stat = ({stat, statDesc, statType, textColour}) => {
   return (
     <div>
-        <p className='flex text-center items-center justify-center font-supreme-extrabold h2'>
+        <h3 className='flex text-center items-center justify-center font-supreme-extrabold h3'>
             <NumberTicker
                 value={stat}
                 className={textColour}
@@ -12,7 +12,7 @@ const Stat = ({stat, statDesc, statType, textColour}) => {
             <p className='text-textWhite'>
                 {statType}
             </p>
-        </p>
+        </h3>
 
         <h5 className='text-center font-supreme-medium h5 text-textWhite'>
             {statDesc}

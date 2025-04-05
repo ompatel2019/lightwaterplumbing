@@ -8,13 +8,6 @@ import CTAMini from '../components/CTAMini';
 import PageHeading from '../components/PageHeading';
 
 const ProjectsPage = ({ placeholderImg, projectsData }) => {
-  const jsonLdProjectsPage = {
-    "@context": "https://schema.org",
-    "@type": "Project",
-    "name": "Penrith Projects by Lightwater Plumbing",
-    "description": "Collection of our latest plumbing projects completed in Penrith and beyond.",
-    "url": "https://example.com/projects"
-  };
 
   const stats = [
     { stat: "120", statType: "+", statDesc: "Residential Installations" },
@@ -27,8 +20,14 @@ const ProjectsPage = ({ placeholderImg, projectsData }) => {
       <SeoHelmet
         title="Projects | Lightwater Plumbing"
         description="Explore our plumbing projects that showcase quality workmanship and innovative solutions."
-        canonicalUrl="https://example.com/projects"
-        jsonSchema={jsonLdProjectsPage}
+        canonicalUrl="https://lightwatergroup.com.au/projects"
+        jsonSchema={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Penrith Projects by Lightwater Plumbing",
+          "description": "Collection of our latest plumbing projects completed in Penrith and beyond.",
+          "url": "https://lightwatergroup.com.au/projects"
+        }}
       />
 
       <PageHeading

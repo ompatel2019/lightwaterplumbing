@@ -22,7 +22,10 @@ import placeholderImg from './assets/images/placeholder.png'
 import ServicePage from './pages/ServicePage';
 
 // images 
-import hero from './assets/images/hero.png'
+import heroImg from './assets/images/hero.png'
+import servicesImg from './assets/images/bathroom.png'
+import whychooseusImg from './assets/images/shower.png'
+import contactImg from './assets/images/ute.png'
 
 // lazy-loaded pages
 const HomePage = lazy(() => import('./pages/HomePage'));
@@ -130,7 +133,6 @@ Coupled with high-efficiency fixtures and modern materials, our upgrades not onl
 From there, we create a phased plan to align with your renovation timeline. Our plumbers collaborate closely with architects, electricians, and general contractors to ensure each step is completed safely, on schedule, and to your exact specifications.`
   }
 ];
-
 
 const projectsData = [
   {
@@ -247,7 +249,7 @@ const router = createBrowserRouter(
         index
         element={
           <Suspense fallback={<Fallback />}>
-            <HomePage hero={hero} projectsData={projectsData} services={services.slice(0,6)}/>
+            <HomePage heroImg={heroImg} projectsData={projectsData} services={services.slice(0,6)}/>
           </Suspense>
         }
       />
@@ -256,7 +258,7 @@ const router = createBrowserRouter(
         path="services"
         element={
           <Suspense fallback={<Fallback />}>
-            <ServicesPage services={services} placeholderImg={placeholderImg}/>
+            <ServicesPage services={services} servicesImg={servicesImg}/>
           </Suspense>
         }
       />
@@ -265,7 +267,7 @@ const router = createBrowserRouter(
         path="why-choose-us"
         element={
           <Suspense fallback={<Fallback />}>
-            <WhyChooseUsPage placeholderImg={placeholderImg}/>
+            <WhyChooseUsPage whychooseusImg={whychooseusImg}/>
           </Suspense>
         }
       />
@@ -292,7 +294,7 @@ const router = createBrowserRouter(
         path="contact-us"
         element={
           <Suspense fallback={<Fallback />}>
-            <ContactPage placeholderImg={placeholderImg}/>
+            <ContactPage contactImg={contactImg}/>
           </Suspense>
         }
       />

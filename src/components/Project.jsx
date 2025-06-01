@@ -1,61 +1,54 @@
-import React from 'react';
-import ImageComponent from './ImageComponent';
+import React from "react";
+import ImageComponent from "./ImageComponent";
+import { Link } from "react-router-dom";
 
 const Project = ({ project }) => {
   return (
-    <div className="container py-12 space-y-16">
-      {/* Hero Image Section */}
-      <div className="mb-8">
-        <ImageComponent
-          src={project.image}
-          alt={project.title}
-          width="100%"
-          height="auto"
-          className="w-full h-auto rounded shadow-xl"
-        />
+    <div className="container px-4 space-y-12">
+      {/* Hero Layout */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+        {/* Image */}
+        <div className="w-full">
+          <div className="rounded-lg overflow-hidden shadow-lg border border-gray-200 bg-white p-2">
+            <ImageComponent
+              src={project.image}
+              alt={project.title}
+              className="object-cover w-full h-full rounded-md"
+            />
+          </div>
+        </div>
+
+        {/* Text Content */}
+        <div className="flex flex-col justify-between space-y-6">
+          <div>
+            <h2 className="text-4xl font-bold text-textDark mb-4">{project.title}</h2>
+            <div className="flex flex-wrap gap-3 text-sm text-gray-600 mb-6">
+              <span className="bg-gray-100 px-3 py-1 rounded-full">
+                <strong>Category:</strong> {project.category}
+              </span>
+              <span className="bg-gray-100 px-3 py-1 rounded-full">
+                <strong>Client:</strong> {project.client}
+              </span>
+              <span className="bg-gray-100 px-3 py-1 rounded-full">
+                <strong>Completed:</strong> {project.completionDate}
+              </span>
+            </div>
+            <p className="text-gray-700 leading-relaxed">{project.extendedDescription}</p>
+          </div>
+
+          {/* Optional Action */}
+          <div>
+            <Link to='/contact-us' className="bg-primary text-white px-6 py-2 rounded shadow hover:bg-blue-700 transition">
+              Book Similar Service
+            </Link>
+          </div>
+        </div>
       </div>
 
-      {/* Project Overview Section */}
-      <section className="bg-white p-8 rounded-lg shadow-md">
-        <h2 className="text-3xl font-bold mb-4">{project.title}</h2>
-        <div className="mb-4 text-gray-700 space-y-2">
-          <p>
-            <span className="font-bold">Category:</span> {project.category}
-          </p>
-          <p>
-            <span className="font-bold">Client:</span> {project.client}
-          </p>
-          <p>
-            <span className="font-bold">Completion Date:</span> {project.completionDate}
-          </p>
-        </div>
-        <p className="text-gray-600 leading-relaxed">
-          {project.extendedDescription}
-        </p>
-      </section>
-
-      {/* Project Highlights Section */}
-      <section className="bg-gray-100 p-8 rounded-lg shadow-inner">
-        <h3 className="text-2xl font-bold mb-4 text-textDark">Project Highlights</h3>
-        <p className="text-gray-600 leading-relaxed">
-          {project.projectHighlights}
-        </p>
-      </section>
-
-      {/* Design & Execution Section */}
-      <section className="bg-white p-8 rounded-lg shadow-md">
-        <h3 className="text-2xl font-bold mb-4 text-textDark">Design & Execution</h3>
-        <p className="text-gray-600 leading-relaxed">
-          {project.designExecution}
-        </p>
-      </section>
-
-      {/* Client Feedback Section */}
-      <section className="bg-gray-50 p-8 rounded-lg shadow-sm">
-        <h3 className="text-2xl font-bold mb-4 text-textDark">Client Feedback</h3>
-        <p className="text-gray-600 leading-relaxed">
-          {project.clientFeedback}
-        </p>
+      {/* Highlights */}
+      <section className="bg-gray-50 p-6 md:p-10 rounded-lg shadow-inner">
+        <h3 className="text-2xl font-semibold text-textDark mb-4">Project Highlights</h3>
+        <p className="text-gray-700 leading-relaxed">{project.projectHighlights}</p>
       </section>
     </div>
   );

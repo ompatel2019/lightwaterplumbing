@@ -109,7 +109,7 @@ const ContactForm = () => {
 
               <button
                 type="submit"
-                className="w-full bg-black text-white font-semibold py-4 rounded-lg hover:bg-white hover:text-black transition duration-200"
+                className="w-full hover:bg-black hover:text-white font-semibold py-4 rounded-lg bg-white text-black transition duration-200"
               >
                 Send Inquiry
               </button>

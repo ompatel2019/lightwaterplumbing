@@ -1,18 +1,18 @@
 // pages/ProjectsPage.jsx
-import React from 'react';
-import SeoHelmet from '../tools/SeoHelmet';
-import Projects from '../components/Projects';
-import CTA from '../components/CTA';
-import Stats from '../components/Stats';
-import CTAMini from '../components/CTAMini';
-import PageHeading from '../components/PageHeading';
+import React from "react";
+import SeoHelmet from "../tools/SeoHelmet";
+import Projects from "../components/Projects";
+import CTA from "../components/CTA";
+import Stats from "../components/Stats";
+import CTAMini from "../components/CTAMini";
+import PageHeading from "../components/PageHeading";
+import aboutUs3 from "../assets/images/aboutUs3.webp"
 
 const ProjectsPage = ({ placeholderImg, projectsData }) => {
-
   const stats = [
     { stat: "120", statType: "+", statDesc: "Residential Installations" },
     { stat: "800", statType: "+", statDesc: "Clients Served" },
-    { stat: "2500", statType: "+", statDesc: "Projects Completed" }
+    { stat: "2500", statType: "+", statDesc: "Projects Completed" },
   ];
 
   return (
@@ -24,19 +24,20 @@ const ProjectsPage = ({ placeholderImg, projectsData }) => {
         jsonSchema={{
           "@context": "https://schema.org",
           "@type": "WebPage",
-          "name": "Penrith Projects by Lightwater Plumbing",
-          "description": "Collection of our latest plumbing projects completed in Penrith and beyond.",
-          "url": "https://lightwatergroup.com.au/projects"
+          name: "Penrith Projects by Lightwater Plumbing",
+          description:
+            "Collection of our latest plumbing projects completed in Penrith and beyond.",
+          url: "https://lightwatergroup.com.au/projects",
         }}
       />
 
       <PageHeading
-        placeholderImg={placeholderImg}
+        img={aboutUs3}
         route="Home / Projects"
         heading="Projects"
         subheading="Explore our portfolio of completed projects, demonstrating quality workmanship and innovative solutions."
       />
-      <Stats stats={stats} bg="bg-primary" text="text-textWhite"/>
+      <Stats stats={stats} bg="bg-primary" text="text-textWhite" />
       <Projects
         bg="bg-white"
         text="text-textBlack"
@@ -44,8 +45,8 @@ const ProjectsPage = ({ placeholderImg, projectsData }) => {
         placeholderImg={placeholderImg}
         projectsData={projectsData}
       />
-      <CTAMini text="Claim Your Exclusive Discount Now"/>
-      <CTA bg="bg-white" text="text-textBlack"/>
+      <CTAMini text="Claim Your Exclusive Discount Now" />
+      <CTA bg="bg-white" text="text-textBlack" />
     </>
   );
 };

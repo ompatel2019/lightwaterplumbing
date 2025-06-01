@@ -4,6 +4,7 @@ import SectionHeader from './SectionHeader';
 import ImageComponent from './ImageComponent';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Phone, Clock, Award, Shield } from 'lucide-react';
+import aboutUs1 from "../assets/images/aboutUs1.webp";
 
 const WhyChooseUs = ({ bg, text, placeholderImg }) => {
   const benefits = [
@@ -45,7 +46,7 @@ const WhyChooseUs = ({ bg, text, placeholderImg }) => {
               {/* Improved aspect ratio wrapper */}
               <div className="aspect-w-4 aspect-h-3 w-full">
                 <ImageComponent 
-                  src={placeholderImg} 
+                  src={aboutUs1} 
                   alt="Professional plumber at work" 
                   width={600} 
                   height={450} 

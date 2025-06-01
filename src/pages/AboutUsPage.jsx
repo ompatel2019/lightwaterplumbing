@@ -8,6 +8,7 @@ import AboutUs from '../components/AboutUs';
 import Testimonials from '../components/Testimonials';
 import Faqs from '../components/Faqs';
 import CTA from '../components/CTA';
+import aboutUs4 from "../assets/images/aboutUs4.webp"
 
 const AboutUsPage = ({ placeholderImg }) => {
   
@@ -33,7 +34,7 @@ const AboutUsPage = ({ placeholderImg }) => {
       />
 
       <PageHeading
-        placeholderImg={placeholderImg}
+        img={aboutUs4}
         route="Home / About Us"
         heading="About Us"
         subheading="Learn about our history, mission, and how we serve with top-notch plumbing solutions."

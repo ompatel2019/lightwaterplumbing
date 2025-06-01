@@ -30,7 +30,7 @@ const Projects = ({ bg, text, isHome, projectsData }) => {
             >
               <div className="relative overflow-hidden">
                 <img 
-                  src={placeholder} 
+                  src={project.image} 
                   alt={project.title} 
                   className="w-full h-48 object-cover transition-transform duration-500 hover:scale-110"
                 />

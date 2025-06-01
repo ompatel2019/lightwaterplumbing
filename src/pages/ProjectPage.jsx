@@ -1,16 +1,16 @@
 // pages/ProjectPage.jsx
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import { slugify } from '../utils/slugify';
+import React from "react";
+import { useParams } from "react-router-dom";
+import { slugify } from "../utils/slugify";
 
 // Tools & Components
-import SeoHelmet from '../tools/SeoHelmet';
-import CTAMini from '../components/CTAMini';
-import Section from '../components/Section';
-import PageHeadingHeader from '../components/PageHeadingHeader';
-import CTA from '../components/CTA';
-import NotFoundPage from './NotFoundPage';
-import Project from '../components/Project';
+import SeoHelmet from "../tools/SeoHelmet";
+import CTAMini from "../components/CTAMini";
+import Section from "../components/Section";
+import PageHeadingHeader from "../components/PageHeadingHeader";
+import CTA from "../components/CTA";
+import NotFoundPage from "./NotFoundPage";
+import Project from "../components/Project";
 
 const ProjectPage = ({ projectsData }) => {
   const { slug } = useParams();
@@ -31,14 +31,14 @@ const ProjectPage = ({ projectsData }) => {
         jsonSchema={{
           "@context": "https://schema.org",
           "@type": "Project",
-          "name": project.title,
-          "description": project.description,
-          "creator": {
+          name: project.title,
+          description: project.description,
+          creator: {
             "@type": "Organization",
-            "name": "Lightwater Plumbing",
-            "location": "Penrith, Australia"
+            name: "Lightwater Plumbing",
+            location: "Penrith, Australia",
           },
-          "url": canonicalUrl
+          url: canonicalUrl,
         }}
       />
 

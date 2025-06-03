@@ -1,17 +1,19 @@
-import React from 'react';
-import { HashLink } from 'react-router-hash-link';
-import Section from './Section';
-import SectionHeader from './SectionHeader';
+import React from "react";
+import { HashLink } from "react-router-hash-link";
+import Section from "./Section";
+import SectionHeader from "./SectionHeader";
+import aboutUs1 from "../assets/images/aboutUs1.webp";
+import ImageComponent from "./ImageComponent";
 
 const AboutUs = () => {
   // Bullet points to display under the main description
   const features = [
-    { text: 'Affordable Pricing' },
-    { text: 'Fast Service' },
-    { text: '1,100+ Projects' },
-    { text: '24/7 Service' },
-    { text: 'Plumbing Experts' },
-    { text: 'Modern Tools' },
+    { text: "Affordable Pricing" },
+    { text: "Fast Service" },
+    { text: "1,100+ Projects" },
+    { text: "24/7 Service" },
+    { text: "Plumbing Experts" },
+    { text: "Modern Tools" },
   ];
 
   return (
@@ -29,28 +31,29 @@ const AboutUs = () => {
               // Paragraph/description
               sectionDesc="With decades of experience since 2000, we stand as your premier plumbing experts, committed to delivering dependable services that have earned the trust and loyalty of hundreds of customers through unwavering integrity and precise workmanship."
             />
-            
+
             {/* Feature List (Check Icons) */}
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-4">
               {features.map((feature, idx) => (
                 <div key={idx} className="flex items-center">
                   <i className="bi bi-check-circle-fill text-orange-500 mr-2 text-xl"></i>
-                  <span className="text-base sm:text-md">
-                    {feature.text}
-                  </span>
+                  <span className="text-base sm:text-md">{feature.text}</span>
                 </div>
               ))}
             </div>
           </div>
-          
+
           {/* Left Column: Image Placeholder */}
           <div className="flex justify-center">
-            <div className="w-full h-64 sm:h-80 md:h-[400px] bg-gray-200 flex items-center justify-center">
-              {/* You can replace this div with an actual <img> tag if you have a real image */}
-              <span className="text-gray-500">[Image Placeholder]</span>
-            </div>
+            <ImageComponent
+              src={aboutUs1}
+              alt="Professional plumber at work"
+              width={600}
+              height={450}
+              className="w-full h-full object-cover rounded-lg"
+              loading="lazy"
+            />
           </div>
-          
         </div>
       </div>
     </Section>
